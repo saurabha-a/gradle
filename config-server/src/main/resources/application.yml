@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://${HOME}/github_projects/config
+
+          default-label: master
+
+  profiles:
+    active: dev
+

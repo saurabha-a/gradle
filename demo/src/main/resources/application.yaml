@@ -1,0 +1,22 @@
+
+spring:
+  #datasource:
+   # url : jdbc:postgresql://localhost:5432/postgres
+    #driver-class-name : org.postgresql.Driver
+    #username : postgres
+    #password : mypassword
+
+  application:
+    name: demo
+  profiles:
+    active: dev
+
+  config:
+    import: optional:configserver:http://127.0.0.1:8888
+
+eureka:
+  client:
+     enabled: true
+  instance: http://localhost:8761
+
+
